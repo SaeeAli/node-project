@@ -1,0 +1,17 @@
+<%- include("./components/header") %>
+<% if (result.length > 0 ) { %>
+<% result.forEach(element => { %>
+
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <h5 class="card-title"><a href=/message/<%= element._id%>><%= element.name%></a></h5>
+      <p class="card-text"><%= element. message %></p>
+    </div>
+  </div>
+  
+<% }); %>
+<% } else { %>
+    there is no card
+    <% } %>
+
+    <%- include('./components/footer') %>
